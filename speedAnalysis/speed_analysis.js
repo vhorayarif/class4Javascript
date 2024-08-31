@@ -31,6 +31,9 @@ function endTest(){
 
     var timeElapsed = (endTime - startTime)/1000; //in seconds
     var userTypedText = document.getElementById("userInput").value;
+    var totalTextLength= userTypedText.length;
+
+
 
     //split the text using regex to count words correclty
 
@@ -49,6 +52,7 @@ function endTest(){
     var outputDiv = document.getElementById("output");
 
     outputDiv.innerHTML = "<h2>Typing Test Result:</h2>" + 
+            "<p>Total Length: " + totalTextLength + "</p>" +
             "<p>Words Typed: " + typedWords + "</p>" +
              "<p>Time Elapsed: " + timeElapsed + "seconds</p> " + 
              "<p>Words Per Minute (WPM): " + wpm + "</p>";
